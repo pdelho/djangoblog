@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+
+{% block main_content %}
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Welcome to Channels Obstruction!</h1>
+        <hr>
+        
+	    <h3>Welcome to my blog</h3>
+	    
+	    {% for post in object_list %}
+	    <h4>{{post.title}}</h4>
+	    <a href="/blog/{{post.id}}">Read more</a>
+	   	<br>
+	    {% endfor %}
+    </div>
+</div>
+{% endblock %}
